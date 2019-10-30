@@ -18,6 +18,12 @@ services:
     image: joeyderuiter/launc-backend:latest
     networks:
       - backend
+
+  frontend:
+    image: joeyderuiter/launc-frontend:latest
+    networks:
+      - frontend
+
 networks:
   backend: {}
   frontend: {}
