@@ -1,0 +1,23 @@
+version: '3.3' # We use version 3.5 syntax
+services: # Here we define our service(s)
+    # frontend: # The name of the service
+    #   build: 
+    #     context: ../../launc-frontend
+    #     dockerfile: Dockerfile-local
+    #   volumes:
+    #     - '../../launc-frontend:/usr/src/app' 
+    #   ports: 
+    #     - '4200:4200'
+    #   command: > 
+    #     bash -c "npm install && ng serve --port 4200 --host 0.0.0.0"
+
+    backend:
+      build:
+        context: ../../launc-backend
+        dockerfile: Dockerfile-local
+      volumes:
+        - '../../launc-backend:/usr/src/app'
+      ports:
+        - '5000:5000'
+      # command: >
+      #   bash -c "dotnet run --project src/API.Web"
