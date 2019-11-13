@@ -1,0 +1,21 @@
+version: '3.3' # We use version 3.5 syntax
+services: # Here we define our service(s)
+    frontend: # The name of the service
+      build: 
+        context: ../../launc-frontend
+        dockerfile: Dockerfile-local
+      volumes:
+        - '../../launc-frontend:/usr/src/app' 
+      ports: 
+        - '4200:4200'
+
+    backend:
+      build:
+        context: ../../launc-backend
+        dockerfile: Dockerfile-local
+      volumes:
+        - type: bind
+          source: ../../launc-backend
+          target: /app
+      ports:
+        - "5000:5000"
