@@ -16,6 +16,6 @@ services: # Here we define our service(s)
       volumes:
         - type: bind
           source: ../../launc-backend
-          target: /usr/src/app
+          target: /app
       ports:
         - "5000:5000"
