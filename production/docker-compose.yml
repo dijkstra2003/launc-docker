@@ -15,12 +15,12 @@ services:
       - 443:443
   
   backend:
-    image: joeyderuiter/launc-backend:latest
+    image: joeyderuiter/launc-backend:release
     networks:
       - backend
 
   frontend:
-    image: joeyderuiter/launc-frontend:latest
+    image: joeyderuiter/launc-frontend:release
     networks:
       - frontend
 

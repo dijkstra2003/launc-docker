@@ -15,12 +15,12 @@ services:
       - 443:443
   
   backend:
-    image: joeyderuiter/launc-backend:latest
+    image: joeyderuiter/launc-backend:accept
     networks:
       - backend
 
   frontend:
-    image: joeyderuiter/launc-frontend:latest
+    image: joeyderuiter/launc-frontend:accept
     networks:
       - frontend
 
