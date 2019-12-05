@@ -24,10 +24,6 @@ services:
     build:
       context: ../../launc-backend
       dockerfile: Dockerfile-local
-    volumes:
-      - type: bind
-        source: ../../launc-backend
-        target: /app
     ports:
       - "5000:5000"
     networks:
