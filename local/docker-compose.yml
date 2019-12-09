@@ -5,7 +5,7 @@ services:
       context: ../../launc-frontend
       dockerfile: Dockerfile-local
     volumes:
-      - '../../launc-frontend:/usr/src/app' 
+      - ../../launc-frontend:/app
     ports: 
       - '4200:4200'
     networks:
