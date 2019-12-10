@@ -17,6 +17,8 @@ services:
       - POSTGRES_DB=launc
       - POSTGRES_USER=launc
       - POSTGRES_PASSWORD=launc
+    ports:
+      - "5432:5432" # So we can connect to a remote database
     networks:
       - backend
 
