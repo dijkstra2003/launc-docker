@@ -18,6 +18,12 @@ services:
     image: joeyderuiter/launc-backend:release
     networks:
       - backend
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - LAUNC_DB_HOST=${CONN_HOST}
+      - LAUNC_DEFAULT_CONNECTION_STRING=${CONN_STRING}
+      - MOLLIE_REDIRECT_URL=http://dev.launc.space/payment
+      - MOLLIE_WEBHOOK_URL=http://dev.api.launc.space/webhook
 
   frontend:
     image: joeyderuiter/launc-frontend:release
