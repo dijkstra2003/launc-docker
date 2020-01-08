@@ -23,7 +23,7 @@ services:
       - LAUNC_DB_HOST=${CONN_HOST}
       - LAUNC_DEFAULT_CONNECTION_STRING=${CONN_STRING}
       - MOLLIE_REDIRECT_URL=http://dev.launc.space/payment
-      - MOLLIE_WEBHOOK_URL=http://dev.api.launc.space/webhook
+      - MOLLIE_WEBHOOK_URL=http://dev.api.launc.space/payment/webhook
 
   frontend:
     image: joeyderuiter/launc-frontend:accept
